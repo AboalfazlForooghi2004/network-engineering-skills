@@ -1,33 +1,123 @@
+<div align="center">
+
 # Network Engineering Skills
 
-> Practical, precise, and safety-first AI skills for real-world network engineering.
+### Practical AI guidance for Linux, Cisco, Cloud, and Network Operations
 
-This repository contains focused skills for Linux, Cisco, cloud, Kubernetes, and network operations. Each skill is written to help an AI assistant reason about infrastructure accurately, ask for missing context, and produce implementation-ready guidance without inventing environment details.
+<p>
+  <a href="https://github.com/AboalfazlForooghi2004/network-engineering-skills/stargazers"><img src="https://img.shields.io/github/stars/AboalfazlForooghi2004/network-engineering-skills?style=for-the-badge&logo=github&color=24292f" alt="GitHub stars"></a>
+  <a href="https://github.com/AboalfazlForooghi2004/network-engineering-skills"><img src="https://img.shields.io/badge/skills-9-0A7EA4?style=for-the-badge" alt="Nine skills"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-2ea44f?style=for-the-badge" alt="MIT License"></a>
+  <a href="docs/safety-and-change-policy.md"><img src="https://img.shields.io/badge/default-read--only-e05d44?style=for-the-badge" alt="Read-only by default"></a>
+</p>
 
-## Design principles
+<p>
+  <strong>Precise.</strong> <strong>Operational.</strong> <strong>Safety-first.</strong>
+</p>
 
-- **Read-only by default** — inspect and plan before changing anything.
-- **Platform-aware** — do not assume that Linux, IOS-XE, NX-OS, AWS, Azure, and GCP behave the same way.
-- **Evidence-driven** — separate observed facts, assumptions, recommendations, and executed changes.
-- **Change-safe** — every production change needs scope, validation, backup, approval, and rollback.
-- **Secret-safe** — never place credentials, private keys, tokens, or real infrastructure secrets in source files or output.
-- **Operationally useful** — provide commands, checks, expected results, failure conditions, and next steps when the required context is available.
+</div>
 
-## Skill catalog
+---
 
-| Skill | Status | Focus |
-|---|---:|---|
-| [Network Incident Triage](skills/network-incident-triage/SKILL.md) | Available | Scope, isolate, diagnose, stabilize, and communicate network incidents |
-| [Linux Network Troubleshooting](skills/linux-network-troubleshooting/SKILL.md) | Available | Kernel networking, routing, namespaces, nftables, and packet paths |
-| [Cisco Network Troubleshooting](skills/cisco-network-troubleshooting/SKILL.md) | Available | IOS, IOS-XE, NX-OS, switching, routing, ACLs, and device health |
-| [Routing, VRF, and PBR Design](skills/routing-vrf-pbr-design/SKILL.md) | Available | Routing architecture, policy routing, VRF, ECMP, and return paths |
-| [Packet Capture and Flow Analysis](skills/packet-capture-flow-analysis/SKILL.md) | Available | tcpdump, Wireshark, counters, NAT, and flow tracing |
-| [Change and Rollback Planning](skills/change-rollback-planning/SKILL.md) | Available | Safe implementation plans, validation, and recovery |
-| [Cloud Network Troubleshooting](skills/cloud-network-troubleshooting/SKILL.md) | Available | VPC/VNet routing, security controls, VPN, and private connectivity |
-| [Network Documentation and Runbooks](skills/network-documentation-runbook/SKILL.md) | Available | HLD, LLD, diagrams, runbooks, and as-built documentation |
-| [Network Automation](skills/network-automation/SKILL.md) | Available | Ansible, Nornir, Netmiko, Scrapli, Terraform, Jinja2, Git, CI/CD, idempotency, dry runs, backup, and rollback |
+## What this is
 
-## Repository structure
+`network-engineering-skills` is a collection of focused AI skills for real infrastructure work. Each skill helps an assistant understand the environment, ask for missing facts, reason about the packet or change path, and produce guidance that an engineer can review and use.
+
+The goal is not to generate random command lists. The goal is to turn an ambiguous network request into a structured, evidence-based engineering workflow.
+
+> **Core rule:** inspect first, plan clearly, validate everything, and never invent infrastructure facts.
+
+## Why these skills exist
+
+Network engineering crosses multiple layers at once:
+
+- Linux kernel networking, namespaces, VRFs, bridges, nftables, and conntrack
+- Cisco switching, routing, control plane, and platform-specific behavior
+- Cloud routing, security policy, VPN, transit, NAT, DNS, and private connectivity
+- Automation, configuration management, idempotency, dry runs, and rollback
+- Incident response, packet analysis, change management, and documentation
+
+These skills keep those workflows focused instead of forcing every task through one oversized prompt.
+
+## Skill library
+
+### Diagnose
+
+| Skill | What it helps with |
+|---|---|
+| [Network Incident Triage](skills/network-incident-triage/SKILL.md) | Scope incidents, test hypotheses, isolate fault domains, stabilize service, and document recovery |
+| [Linux Network Troubleshooting](skills/linux-network-troubleshooting/SKILL.md) | Investigate interfaces, routes, policy routing, namespaces, VRFs, firewall state, conntrack, and sockets |
+| [Cisco Network Troubleshooting](skills/cisco-network-troubleshooting/SKILL.md) | Troubleshoot IOS, IOS-XE, NX-OS, switching, routing, neighbors, ACLs, and device health |
+| [Packet Capture and Flow Analysis](skills/packet-capture-flow-analysis/SKILL.md) | Plan bounded captures and trace handshakes, NAT, drops, retransmissions, and return paths |
+
+### Design and change
+
+| Skill | What it helps with |
+|---|---|
+| [Routing, VRF, and PBR Design](skills/routing-vrf-pbr-design/SKILL.md) | Design forwarding, segmentation, policy routing, ECMP, symmetric paths, route leaking, and failover |
+| [Change and Rollback Planning](skills/change-rollback-planning/SKILL.md) | Prepare reviewable changes with pre-checks, backups, staged execution, validation, approval, and rollback |
+| [Cloud Network Troubleshooting](skills/cloud-network-troubleshooting/SKILL.md) | Analyze VPC/VNet routing, security controls, VPN, transit, NAT, DNS, load balancers, and private endpoints |
+
+### Build and operate
+
+| Skill | What it helps with |
+|---|---|
+| [Network Automation](skills/network-automation/SKILL.md) | Use Ansible, Nornir, Netmiko, Scrapli, Terraform, Jinja2, Git, and CI/CD safely |
+| [Network Documentation and Runbooks](skills/network-documentation-runbook/SKILL.md) | Produce HLD, LLD, as-built documents, topology notes, runbooks, and operational procedures |
+
+## How every skill behaves
+
+```text
+Request
+  ↓
+Understand scope and environment
+  ↓
+Ask for missing facts
+  ↓
+Separate facts from assumptions
+  ↓
+Inspect or design the expected path
+  ↓
+Propose a safe, reviewable workflow
+  ↓
+Validate with evidence
+  ↓
+Document results, risks, and rollback
+```
+
+### Shared quality bar
+
+- **Read-only by default** — inspect before changing.
+- **Platform-aware** — do not mix Linux, IOS-XE, NX-OS, AWS, Azure, or GCP behavior without verification.
+- **Evidence-driven** — distinguish observed facts, hypotheses, recommendations, and executed actions.
+- **Change-safe** — define scope, impact, validation, backup, approval, and rollback.
+- **Idempotent where possible** — repeated runs must not create duplicate or unexpected state.
+- **Secret-safe** — never include passwords, tokens, private keys, or real credentials.
+- **Honest about uncertainty** — label unknown values instead of filling them with plausible guesses.
+
+## Example requests
+
+```text
+A Linux host can reach the gateway but not the application subnet.
+Trace the route, policy routing, firewall, conntrack, and return path using read-only checks.
+```
+
+```text
+Design a VRF and PBR architecture for two traffic classes over two uplinks.
+Show forward and return paths, failure behavior, validation tests, and rollback risks.
+```
+
+```text
+Create an Ansible workflow to configure Cisco access switches.
+Start with inventory and platform questions, then produce a dry-run, backup, validation, and rollback plan.
+```
+
+```text
+A cloud workload cannot reach an on-premises service over VPN.
+Analyze route propagation, security controls, DNS, tunnel state, and the return path.
+```
+
+## Repository layout
 
 ```text
 .
@@ -60,33 +150,48 @@ This repository contains focused skills for Linux, Cisco, cloud, Kubernetes, and
 
 ## Using a skill
 
-Open the relevant `SKILL.md` and provide the assistant with the environment facts required by that skill. For network automation, include at least:
+1. Open the relevant `SKILL.md`.
+2. Provide the assistant with the platform, topology, scope, and desired outcome.
+3. Include the current state and any known constraints.
+4. Ask for a read-only assessment or a change plan first.
+5. Review the proposed validation and rollback before execution.
+6. Record the evidence and outcome after the work.
 
-- The target environment and change stage.
-- Inventory and platform versions.
-- The desired end state.
-- Scope and constraints.
-- The validation plan.
-- Backup and rollback requirements.
+If important context is missing, the skill should ask focused questions instead of guessing.
 
-If any of these are unknown, the skill should ask focused questions instead of guessing.
+## Safety and scope
 
-## Implemented skills
+These skills are designed to assist engineering decisions, not to bypass change control.
 
-- **Network Incident Triage** — scope, isolate, investigate, stabilize, validate, and document network incidents.
-- **Linux Network Troubleshooting** — inspect Linux interfaces, routes, policy routing, namespaces, VRFs, firewall state, conntrack, and packet paths.
-- **Cisco Network Troubleshooting** — investigate IOS, IOS-XE, NX-OS, switching, routing, neighbors, policies, and device health.
-- **Routing, VRF, and PBR Design** — design forwarding, isolation, policy routing, return paths, failure behavior, and validation matrices.
-- **Packet Capture and Flow Analysis** — plan bounded captures, trace packets across capture points, analyze NAT and handshakes, and protect sensitive data.
-- **Change and Rollback Planning** — prepare reviewable change plans with backups, staged execution, validation, approval, and targeted rollback.
-- **Cloud Network Troubleshooting** — analyze provider-specific routing, security controls, VPN, transit, NAT, DNS, and private connectivity.
-- **Network Documentation and Runbooks** — produce accurate HLD, LLD, as-built documentation, and safe operational runbooks.
-- **Network Automation** — inventory and platform discovery, tool selection, data modeling, dry-run design, idempotency, progressive execution, validation, backup, rollback, and operational reporting.
+Before a production-impacting action, the workflow must include:
+
+- Target and scope confirmation
+- Expected impact and blast radius
+- Backup or snapshot
+- Validation criteria
+- Rollback procedure
+- Explicit approval
+
+Read the full [Safety and Change Policy](docs/safety-and-change-policy.md) for the operating boundary.
 
 ## Contributing
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md) and [docs/skill-development-guidelines.md](docs/skill-development-guidelines.md) before opening a pull request.
+Contributions are welcome when they improve technical accuracy, operational safety, clarity, or reuse.
+
+Before opening a pull request:
+
+- Read [CONTRIBUTING.md](CONTRIBUTING.md).
+- Follow the [Skill Development Guidelines](docs/skill-development-guidelines.md).
+- Keep examples free of secrets and real credentials.
+- Add validation, failure handling, and rollback guidance.
+- Preserve the read-only-by-default behavior.
 
 ## License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
+
+<div align="center">
+
+<sub>Built for engineers who care about the packet path, the return path, and the rollback path.</sub>
+
+</div>
