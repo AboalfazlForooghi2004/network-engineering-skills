@@ -17,14 +17,14 @@ This repository contains focused skills for Linux, Cisco, cloud, Kubernetes, and
 
 | Skill | Status | Focus |
 |---|---:|---|
-| [Network Incident Triage](skills/network-incident-triage/SKILL.md) | Available | Scope, isolate, diagnose, and communicate network incidents |
-| [Linux Network Troubleshooting](skills/linux-network-troubleshooting/SKILL.md) | Planned | Kernel networking, routing, namespaces, nftables, and packet paths |
-| [Cisco Network Troubleshooting](skills/cisco-network-troubleshooting/SKILL.md) | Planned | IOS, IOS-XE, NX-OS, switching, routing, ACLs, and device health |
-| [Routing, VRF, and PBR Design](skills/routing-vrf-pbr-design/SKILL.md) | Planned | Routing architecture, policy routing, VRF, ECMP, and return paths |
-| [Packet Capture and Flow Analysis](skills/packet-capture-flow-analysis/SKILL.md) | Planned | tcpdump, Wireshark, counters, NAT, and flow tracing |
-| [Change and Rollback Planning](skills/change-rollback-planning/SKILL.md) | Planned | Safe implementation plans, validation, and recovery |
-| [Cloud Network Troubleshooting](skills/cloud-network-troubleshooting/SKILL.md) | Planned | VPC/VNet routing, security controls, VPN, and private connectivity |
-| [Network Documentation and Runbooks](skills/network-documentation-runbook/SKILL.md) | Planned | HLD, LLD, diagrams, runbooks, and as-built documentation |
+| [Network Incident Triage](skills/network-incident-triage/SKILL.md) | Available | Scope, isolate, diagnose, stabilize, and communicate network incidents |
+| [Linux Network Troubleshooting](skills/linux-network-troubleshooting/SKILL.md) | Available | Kernel networking, routing, namespaces, nftables, and packet paths |
+| [Cisco Network Troubleshooting](skills/cisco-network-troubleshooting/SKILL.md) | Available | IOS, IOS-XE, NX-OS, switching, routing, ACLs, and device health |
+| [Routing, VRF, and PBR Design](skills/routing-vrf-pbr-design/SKILL.md) | Available | Routing architecture, policy routing, VRF, ECMP, and return paths |
+| [Packet Capture and Flow Analysis](skills/packet-capture-flow-analysis/SKILL.md) | Available | tcpdump, Wireshark, counters, NAT, and flow tracing |
+| [Change and Rollback Planning](skills/change-rollback-planning/SKILL.md) | Available | Safe implementation plans, validation, and recovery |
+| [Cloud Network Troubleshooting](skills/cloud-network-troubleshooting/SKILL.md) | Available | VPC/VNet routing, security controls, VPN, and private connectivity |
+| [Network Documentation and Runbooks](skills/network-documentation-runbook/SKILL.md) | Available | HLD, LLD, diagrams, runbooks, and as-built documentation |
 | [Network Automation](skills/network-automation/SKILL.md) | Available | Ansible, Nornir, Netmiko, Scrapli, Terraform, Jinja2, Git, CI/CD, idempotency, dry runs, backup, and rollback |
 
 ## Repository structure
@@ -35,9 +35,23 @@ This repository contains focused skills for Linux, Cisco, cloud, Kubernetes, and
 │   ├── safety-and-change-policy.md
 │   └── skill-development-guidelines.md
 ├── skills/
+│   ├── change-rollback-planning/
+│   │   └── SKILL.md
+│   ├── cisco-network-troubleshooting/
+│   │   └── SKILL.md
+│   ├── cloud-network-troubleshooting/
+│   │   └── SKILL.md
+│   ├── linux-network-troubleshooting/
+│   │   └── SKILL.md
+│   ├── network-automation/
+│   │   └── SKILL.md
+│   ├── network-documentation-runbook/
+│   │   └── SKILL.md
 │   ├── network-incident-triage/
 │   │   └── SKILL.md
-│   └── network-automation/
+│   ├── packet-capture-flow-analysis/
+│   │   └── SKILL.md
+│   └── routing-vrf-pbr-design/
 │       └── SKILL.md
 ├── CONTRIBUTING.md
 ├── LICENSE
@@ -57,14 +71,17 @@ Open the relevant `SKILL.md` and provide the assistant with the environment fact
 
 If any of these are unknown, the skill should ask focused questions instead of guessing.
 
-## Current implementation
-
-The implemented skills are:
+## Implemented skills
 
 - **Network Incident Triage** — scope, isolate, investigate, stabilize, validate, and document network incidents.
+- **Linux Network Troubleshooting** — inspect Linux interfaces, routes, policy routing, namespaces, VRFs, firewall state, conntrack, and packet paths.
+- **Cisco Network Troubleshooting** — investigate IOS, IOS-XE, NX-OS, switching, routing, neighbors, policies, and device health.
+- **Routing, VRF, and PBR Design** — design forwarding, isolation, policy routing, return paths, failure behavior, and validation matrices.
+- **Packet Capture and Flow Analysis** — plan bounded captures, trace packets across capture points, analyze NAT and handshakes, and protect sensitive data.
+- **Change and Rollback Planning** — prepare reviewable change plans with backups, staged execution, validation, approval, and targeted rollback.
+- **Cloud Network Troubleshooting** — analyze provider-specific routing, security controls, VPN, transit, NAT, DNS, and private connectivity.
+- **Network Documentation and Runbooks** — produce accurate HLD, LLD, as-built documentation, and safe operational runbooks.
 - **Network Automation** — inventory and platform discovery, tool selection, data modeling, dry-run design, idempotency, progressive execution, validation, backup, rollback, and operational reporting.
-
-The remaining skills will be added incrementally and kept independent so they can be reviewed, tested, and reused without bringing unrelated instructions into context.
 
 ## Contributing
 
