@@ -17,7 +17,7 @@ This repository contains focused skills for Linux, Cisco, cloud, Kubernetes, and
 
 | Skill | Status | Focus |
 |---|---:|---|
-| [Network Incident Triage](skills/network-incident-triage/SKILL.md) | Planned | Scope, isolate, diagnose, and communicate network incidents |
+| [Network Incident Triage](skills/network-incident-triage/SKILL.md) | Available | Scope, isolate, diagnose, and communicate network incidents |
 | [Linux Network Troubleshooting](skills/linux-network-troubleshooting/SKILL.md) | Planned | Kernel networking, routing, namespaces, nftables, and packet paths |
 | [Cisco Network Troubleshooting](skills/cisco-network-troubleshooting/SKILL.md) | Planned | IOS, IOS-XE, NX-OS, switching, routing, ACLs, and device health |
 | [Routing, VRF, and PBR Design](skills/routing-vrf-pbr-design/SKILL.md) | Planned | Routing architecture, policy routing, VRF, ECMP, and return paths |
@@ -35,6 +35,8 @@ This repository contains focused skills for Linux, Cisco, cloud, Kubernetes, and
 │   ├── safety-and-change-policy.md
 │   └── skill-development-guidelines.md
 ├── skills/
+│   ├── network-incident-triage/
+│   │   └── SKILL.md
 │   └── network-automation/
 │       └── SKILL.md
 ├── CONTRIBUTING.md
@@ -57,7 +59,10 @@ If any of these are unknown, the skill should ask focused questions instead of g
 
 ## Current implementation
 
-The first implemented skill is **Network Automation**. It covers the complete workflow from inventory and platform discovery through tool selection, data modeling, dry-run design, idempotency, progressive execution, validation, backup, rollback, and operational reporting.
+The implemented skills are:
+
+- **Network Incident Triage** — scope, isolate, investigate, stabilize, validate, and document network incidents.
+- **Network Automation** — inventory and platform discovery, tool selection, data modeling, dry-run design, idempotency, progressive execution, validation, backup, rollback, and operational reporting.
 
 The remaining skills will be added incrementally and kept independent so they can be reviewed, tested, and reused without bringing unrelated instructions into context.
 
